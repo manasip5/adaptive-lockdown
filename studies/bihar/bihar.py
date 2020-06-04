@@ -12,6 +12,8 @@ from adaptive.plots  import gantt_chart, plot_simulation_range
 from adaptive.policy import simulate_adaptive_control, simulate_lockdown
 from adaptive.utils  import cwd, days, weeks, fmt_params
 
+global gamma
+
 
 def model(districts, populations, cases, seed) -> Model:
     max_ts = max([ts.index.max() for ts in cases.values()]).isoformat()
